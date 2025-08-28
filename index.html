@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Historia Clínica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Historia Clínica</h1>
+    <form id="historiaForm">
+      <!-- I. Datos de Identificación -->
+      <section>
+        <h2>I. Datos de Identificación</h2>
+        <input type="text" placeholder="Nombre completo" id="nombre" required>
+        <input type="number" placeholder="Edad" id="edad" required>
+        <input type="text" placeholder="Sexo" id="sexo">
+        <input type="date" placeholder="Fecha de nacimiento" id="fechaNacimiento">
+        <input type="text" placeholder="Lugar de nacimiento" id="lugarNacimiento">
+        <input type="text" placeholder="Estado civil" id="estadoCivil">
+        <input type="text" placeholder="Ocupación" id="ocupacion">
+        <input type="text" placeholder="Escolaridad" id="escolaridad">
+        <input type="text" placeholder="Dirección y teléfono" id="contacto">
+        <input type="text" placeholder="Fuente de información" id="fuente">
+        <input type="text" placeholder="Fiabilidad" id="fiabilidad">
+      </section>
+
+      <!-- II. Motivo de Consulta -->
+      <section>
+        <h2>II. Motivo de Consulta</h2>
+        <textarea id="motivo" rows="2" placeholder="Dolor abdominal desde hace 2 días"></textarea>
+      </section>
+
+      <!-- III. Padecimiento Actual -->
+      <section>
+        <h2>III. Padecimiento Actual</h2>
+        <textarea id="padecimiento" rows="4"></textarea>
+      </section>
+
+      <!-- IV. Antecedentes Personales Patológicos -->
+      <section>
+        <h2>IV. Antecedentes Personales Patológicos</h2>
+        <textarea id="patologicos" rows="3"></textarea>
+      </section>
+
+      <!-- V. Antecedentes Personales No Patológicos -->
+      <section>
+        <h2>V. Antecedentes Personales No Patológicos</h2>
+        <textarea id="nopatologicos" rows="3"></textarea>
+      </section>
+
+      <!-- VI. Antecedentes Heredofamiliares -->
+      <section>
+        <h2>VI. Antecedentes Heredofamiliares</h2>
+        <textarea id="heredofamiliares" rows="2"></textarea>
+      </section>
+
+      <!-- VII. Interrogatorio por Aparatos y Sistemas -->
+      <section>
+        <h2>VII. Interrogatorio por Aparatos y Sistemas</h2>
+        <textarea id="sistemas" rows="3"></textarea>
+      </section>
+
+      <!-- VIII. Exploración Física -->
+      <section>
+        <h2>VIII. Exploración Física</h2>
+        <textarea id="exploracion" rows="4"></textarea>
+      </section>
+
+      <!-- IX. Resultados de Laboratorio -->
+      <section>
+        <h2>IX. Resultados de Laboratorio y Gabinete</h2>
+        <textarea id="laboratorio" rows="3"></textarea>
+      </section>
+
+      <!-- X. Impresión Diagnóstica -->
+      <section>
+        <h2>X. Impresión Diagnóstica</h2>
+        <textarea id="diagnostico" rows="2"></textarea>
+      </section>
+
+      <!-- XI. Plan -->
+      <section>
+        <h2>XI. Plan Diagnóstico y Terapéutico</h2>
+        <textarea id="plan" rows="3"></textarea>
+      </section>
+
+      <!-- XII. Evolución -->
+      <section>
+        <h2>XII. Evolución y Notas de Seguimiento</h2>
+        <textarea id="evolucion" rows="3"></textarea>
+      </section>
+
+      <!-- XIII. Pronóstico -->
+      <section>
+        <h2>XIII. Pronóstico</h2>
+        <textarea id="pronostico" rows="2"></textarea>
+      </section>
+
+      <button type="submit">Generar Markdown</button>
+    </form>
+
+    <div id="output" class="preview"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
