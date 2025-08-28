@@ -32,10 +32,19 @@ document.getElementById("historiaForm").addEventListener("submit", function(e) {
     ["XIII. Pronóstico", pronostico.value]
   ];
 
+  // Generar el contenido Markdown
   let resumen = "";
   campos.forEach(([titulo, texto]) => {
     resumen += `\n# ${titulo}\n${texto}\n`;
   });
 
+  // Mostrarlo en la página
   document.getElementById("output").innerText = resumen;
+
+  // Crear y descargar archivo .md
+  const blob = new Blob([resumen], { type: "text/markdown;charset=utf-8" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `HistoriaClinica_${nombre.value || "Paciente"}.md`;
+  link.click();
 });
